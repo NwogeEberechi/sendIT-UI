@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">SendIT</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation" (click)="isCollapsed = !isCollapsed"
+    [attr.aria-expanded]="!isCollapsed">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+        <!-- used for spacing -->
+      </ul>
+      <div class="my-2 my-lg-0">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/">Features</a>
+                </li>
+          <li class="nav-item">
+              <a class="nav-link" routerLink="/"> Login </a>
+          </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/">Create Account</a>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>
