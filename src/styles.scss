@@ -3,3 +3,84 @@
 body{
     padding-top:50px;
 }
+
+/* forms*/
+.form {
+    width: 400px;
+    margin: 30px auto;
+    border: 1px solid #eee;
+    padding: 20px;
+    box-shadow: 0 2px 3px #ccc;
+  }
+  
+  .input {
+    margin: 10px auto;
+  }
+  
+  .input label {
+    display: block;
+    color: #4e4e4e;
+    margin-bottom: 6px;
+  }
+  
+  .input.inline label {
+    display: inline;
+  }
+  
+  .input input {
+    font: inherit;
+    width: 100%;
+    padding: 6px 12px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+  }
+  
+  .input input:focus {
+    outline: none;
+    border: 1px solid #521751;
+    background-color: #eee;
+  }
+  
+  .input.invalid input, .input.invalid textarea {
+    border: ipx solid red;
+    background-color: #ffc9aa;
+  }
+  
+  .input.invalid label, .input p {
+    color: red;
+  }
+  
+  .input.invalid  p {
+    font-size: 0.9rem;
+  }
+  
+  .input.inline input {
+    width: auto;
+  }
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #52033a;
+    border-color: #521751;
+  }
+  .page-link {
+    color: #521751;
+  }
+  .account-prompt{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .form-header{
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+    color: #ff0040;
+    font-weight: 800;
+  }
+  .submit{
+    margin-top:20px;
+    text-align: center;
+  }
+  .submit button{
+    width: 100%;
+  }
