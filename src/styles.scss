@@ -83,4 +83,11 @@ body{
   }
   .submit button{
     width: 100%;
+    background: #ff0040;
+    color: white;
+    border: 1px solid #ff0040
+  }
+  .submit button:hover{
+    color: #ccc;
+    border: 1px solid white
   }
