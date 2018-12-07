@@ -1,5 +1,7 @@
+@import 'variables.scss';
+
 .bg-dark{
-    background: #ff0040 !important
+    background: $major-color !important
 }
 .navbar-dark .navbar-nav .nav-link {
     color: white;

@@ -1,5 +1,7 @@
+@import 'variables.scss';
+
 .landing{
-    background:  #ff0040;
+    background:  $major-color;
     color: white;
     padding-top: 15%;
     padding-bottom: 10%;
@@ -8,7 +10,7 @@
     height: 100%
 }
 .colored-heading{
-    color: #ff0040
+    color: $major-color;
 }
 h4{
     color: #666;
@@ -36,7 +38,7 @@ h4{
     margin-bottom: 3%;
 }
 footer{
-    background:  #ff0040;
+    background:  $major-color;
     color: white;
     padding-top: 5%;
     padding-bottom: 10%;

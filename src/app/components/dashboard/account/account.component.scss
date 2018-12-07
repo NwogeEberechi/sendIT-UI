@@ -1,14 +1,16 @@
+@import 'variables.scss';
+
 .right{
     position: absolute;
     right: 2%;
 }
 
 .mat-toolbar.mat-accent {
-    background: #ff0040;
+    background: $major-color;
     color: #fff;
 }
 mat-sidenav {
-    background: #ff0040;
+    background: $major-color;
     color: white;
     padding: 25px 25px ;
 }

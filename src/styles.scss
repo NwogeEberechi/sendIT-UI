@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~bootstrap/dist/css/bootstrap.min.css';
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+@import 'variables.scss';
+
 
 body{
   font-family: 'Montserrat';
@@ -77,7 +79,7 @@ body{
     text-align: center;
     font-size: 1.2em;
     padding: 10px;
-    color: #ff0040;
+    color: $major-color;
     font-weight: 800;
   }
   .submit{
@@ -86,9 +88,9 @@ body{
   }
   .submit button{
     width: 100%;
-    background: #ff0040;
+    background: $major-color;
     color: white;
-    border: 1px solid #ff0040
+    border: 1px solid $major-color
   }
   .submit button:hover{
     color: #ccc;

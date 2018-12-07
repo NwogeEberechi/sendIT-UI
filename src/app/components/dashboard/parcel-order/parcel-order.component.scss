@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 .form{
     width: 90%;
     margin: auto;
@@ -5,11 +7,11 @@
 .submit-shippment{
     background: white;
     color: #666;
-    border: 1px solid #ff0040;
+    border: 1px solid $major-color;
     width: 100%;
 }
 .submit-shippment:hover{
-    background: #ff0040;
+    background: $major-color;
     color: white;
-    border: 1px solid #ff0040;
+    border: 1px solid $major-color;
 }
