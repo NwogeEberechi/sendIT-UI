@@ -1,5 +1,13 @@
 @import 'variables.scss';
+
 $padding: 20px;
+$desktop: 840px;
+
+@mixin desktop {
+    @media (min-width: #{$desktop}){
+        @content
+    }
+}
 
 .landing{
     clip-path: polygon(100% 0, 100% 83%, 49% 100%, 0 100%, 0 0);
@@ -10,87 +18,232 @@ $padding: 20px;
     width: 100%;
     min-height: 600px;
 
-    section#card {
-        background: #ffffff;
-        padding: $padding;
-        margin: 1em auto;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
-        width: 80%;
-        color: #666;
+    @include desktop {
+        clip-path: polygon(100% 0, 100% 81%, 91% 83%, 0 100%, 0 1%);
+        min-height: 700px;
+        padding-left: 2em; padding-right: 2em;
+    }
+    main {
+        @include desktop {
+            display: grid;
+            grid-template-columns: 50% auto;
+            grid-template-areas: "primary card";
+        }
 
-        ul {
-            list-style-type: none;
-            margin: 0; padding: 0;
+        section#card {
+            background: #ffffff;
+            padding: $padding;
+            margin: 1em auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+            width: 80%;
+            color: #666;
 
-            li {
-                margin-bottom: 10px;
-
-                span {
-                    position: absolute;
-                    width: 30px; height: 30px;
-                    background-color: lighten($major-color, 40%);
-                    border-radius: 50%;
-                    margin-right: 10px;
+            @include desktop {
+                grid-area: card;
+                height: fit-content;
+                align-self: center;
+                margin: 3em;
+                padding: $padding * 3;
+            }
+    
+            ul {
+                list-style-type: none;
+                margin: 0; padding: 0;
+    
+                li {
+                    margin-bottom: 10px;
+    
+                    span {
+                        position: absolute;
+                        width: 30px; height: 30px;
+                        background-color: lighten($major-color, 20%);
+                        border-radius: 50%;
+                        margin-right: 10px;
+                    }
+    
+                    strong {
+                        display: inline-block;
+                        margin-left: max(40px);
+                        margin-top: 3px;
+                        font-size: 0.9em;
+                    }
                 }
+            }
+        }
+    
+        section#primary {
+            text-align: center;
+            padding: $padding;
 
-                strong {
-                    display: inline-block;
-                    margin-left: max(40px);
-                    margin-top: 3px;
-                    font-size: 0.9em;
+            @include desktop {
+                grid-area: primary;
+                text-align: left;
+                margin: 4em 0 0 4em;
+            }
+    
+            h1 {
+                font-size: 1.5em;
+                margin-top: 10px;
+                margin-bottom: 15px;
+
+                @include desktop {
+                    text-transform: uppercase;
+                    font-size: 2em;
+                    line-height: 1.2em;
+                    width: 60%;
+                    font-weight: bold;
+                }
+            }
+    
+            p {
+                font-size: 0.9em;
+
+                @include desktop {
+                    width: 60%;
+                    font-size: 1em;
                 }
             }
         }
     }
+    
+}
 
-    section#primary {
-        text-align: center;
-        padding: $padding;
+.white-bg {
+    margin: 2em 2em;
+    text-align: center;
+    color: #5d6079;
+    opacity: .59;
 
-        h1 {
-            font-size: 1.5em;
-            margin-top: 10px;
-            margin-bottom: 15px;
+    @include desktop {
+        margin: 4em 6em;
+        text-align: left;
+    }
+
+    h3 {
+        color: $major-color;
+        font-weight: 800;
+        margin: 1em auto;
+
+        @include desktop {
+            text-align: center;
         }
 
-        p {
-            font-size: 0.9em;
+    }
+
+    h4 {
+        font-size: 1.1em;
+        margin: 1em auto;
+
+        @include desktop {
+            font-size: 1.3em;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 2em;
+            padding-left: 0.5em; padding-left: 0.5em;
+        }
+    }
+
+    h6 {
+        color: $major-color;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+    p {
+        margin: 2em auto;
+    }
+
+    .client-types {
+        @include desktop {
+            display: flex;
+        }
+
+        div {
+            @include desktop {
+                margin: 30px;
+            }
         }
     }
 }
-.colored-heading{
-    color: $major-color;
-}
-h4{
-    color: #666;
-}
-.client-types{
-    margin-top: 5%;
-    color: #666;
-}
-.uppercase{
-    text-transform: uppercase;
-}
+
 .how-it-works{
-    margin-top: 5%;
-    background: #28a745;
+    clip-path: polygon(0 9%, 100% 0%, 100% 88%, 0 100%);
+    background-color: #28a745;
     color:#ccc;
-    padding-top: 5%;
-    padding-bottom: 8%;
-    margin-bottom: 8%;
+    width: 100%;
+    min-height: 700px;
+    padding-top: $padding * 4;
+    padding-bottom: $padding *4;
+    padding-left: 2em; padding-right: 2em;
+
+    @include desktop {
+        padding-left: 6em; padding-right: 6em;
+    }
+    
+
+    header {
+        color: white;
+        margin: 1em auto;
+        text-align: center;
+
+        h3 {
+            font-weight: bold;
+        }
+
+        h5 {
+            font-size: 1em;
+            margin: 1em auto;
+        }
+    }
+
+    h1 {
+        border-bottom: 4px solid #ccc;
+        text-align: center;
+        margin: 1em auto;
+        font-weight: bold;
+        width: 10%;
+
+        @include desktop {
+            text-align: left;
+        }
+    }
+
+    p {
+        text-align: center;
+        margin: 1em auto;
+
+        @include desktop {
+            text-align: left;
+        }
+    }
+
+    .float {
+        @include desktop {
+            display: flex;
+        }
+
+        div {
+            @include desktop {
+                margin: 35px;
+            }
+        }
+    }
 }
-.underline{
-    text-decoration: underline;
-}
-.header{
-    color: white;
-    margin-bottom: 3%;
-}
+
 footer{
-    background:  $major-color;
+    background:  darken($major-color, 10%);
     color: white;
-    padding-top: 5%;
-    padding-bottom: 10%;
+    padding-top: $padding*3; padding-bottom: $padding *3;
+    padding-left: 2em; padding-right: 2em;
     text-align: center;
+
+    h2 {
+        font-size: 1.7em;
+        margin: 1.5em auto;
+    }
+    
+    button {
+        margin: 1em auto;
+    }
 }
